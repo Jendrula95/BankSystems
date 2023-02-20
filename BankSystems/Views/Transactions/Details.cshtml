@@ -1,0 +1,36 @@
+﻿@model BankSystem.Models.Transaction
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Sczegóły Przelewów</h1>
+
+<div>
+    <h4>Transaction</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TransactionType)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TransactionType)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Value)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Value)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DestAccount)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DestAccount)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a  class="btn btn-primary " asp-action="Edit" asp-route-id="@Model?.TransactionID">Edytuj</a> |
+    <a class="btn btn-primary " asp-action="Index">Powrót</a>
+</div>

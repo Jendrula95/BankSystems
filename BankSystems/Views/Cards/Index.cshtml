@@ -1,0 +1,52 @@
+﻿@model IEnumerable<BankSystem.Models.Cards>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+
+<p>
+    <a   asp-action="Create" asp-route-id="@Context.GetRouteValue("id")">Dodaj Karte</a>
+    
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CardName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Number)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateEnd)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CardName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Number)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateEnd)
+            </td>
+            <td>
+                <a class="btn btn-primary " asp-action="Edit" asp-route-id="@item.CardsID">Edytuj</a> |
+                <a  class="btn btn-primary " asp-action="Details" asp-route-id="@item.CardsID">Szczegóły</a> |
+                <a  class="btn btn-primary " asp-action="Delete" asp-route-id="@item.CardsID">Usuń</a>
+                
+            </td>
+        </tr>
+}<div>
+    <a class="btn btn-primary " asp-action="Index" asp-controller="Account">Powrót</a>
+</div>
+    </tbody>
+    
+</table>
