@@ -57,7 +57,7 @@ namespace BankSystem.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> CreateAction(char TransactionType, decimal Value,int DestAccount,int AccountId)
+        public async Task<IActionResult> CreateAction(string TransactionType, decimal Value,int DestAccount,int AccountId)
         {
             if (ModelState.IsValid)
             {

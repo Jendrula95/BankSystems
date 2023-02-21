@@ -3,12 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BankSystem.Models
 {
-        public enum TransactionType
-        {
-            Deposit = 'D',
-            Withdrawal = 'W',
-            Transfer = 'T',
-        }
+       
 
         public class Transaction
         {
@@ -18,7 +13,7 @@ namespace BankSystem.Models
 
             [Required]
             [Display(Name = "Nazwa Przelewu")]
-            public char TransactionType { get; set; }
+            public string TransactionType { get; set; }
 
             [Required]
             [Display(Name = "Środki")]
