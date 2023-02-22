@@ -1,23 +1,32 @@
 html {
-  font-size: 14px;
+    font-size: 14px;
+   
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+        
+    }
 }
 
 html {
   position: relative;
   min-height: 100%;
+
 }
 
 body {
   margin-bottom: 60px;
+
 }
-.home-index {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    border-color:black;
-    font-size: 70px;
+table {
+    border: 2px solid blue;
+    border-radius: 20px;
+    background-color: #a4c714df;
+    border-bottom: 1px solid #ddd;
+    
+}
+col-md-4 {
+    background-color: #a4c714df;
 }
